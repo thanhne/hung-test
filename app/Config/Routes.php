@@ -24,10 +24,27 @@ $routes->group('api/customers', ['namespace' => 'App\Controllers\API'], function
     $routes->delete('(:num)', 'CustomerAPIController::deleteCustomer/$1');
 });
 
+// Category Routes
+$routes->get('/categoriesList', 'CategoryController::index');
+$routes->get('/addcategory', 'CategoryController::createindex');
+$routes->get('/editcategory/(:num)', 'CategoryController::editindex/$1');
+$routes->get('/category/delete/(:num)', 'CategoryController::delete/$1');
+$routes->post('/category/add', 'CategoryController::create');
+$routes->post('/category/edit/(:num)', 'CategoryController::edit/$1');
+
+$routes->group('api/categories', ['namespace' => 'App\Controllers\API'], function ($routes) {
+    $routes->get('/', 'CategoryAPIController::getAllCategories');
+    $routes->get('(:num)', 'CategoryAPIController::getCategoryById/$1');
+    $routes->post('/', 'CategoryAPIController::createCategory');
+    $routes->put('(:num)', 'CategoryAPIController::updateCategory/$1');
+    $routes->delete('(:num)', 'CategoryAPIController::deleteCategory/$1');
+});
+
+
 // Product Routes
-$routes->get('/products', 'ProductController::index');
+$routes->get('/productsList', 'ProductController::index');
 $routes->get('/addproduct', 'ProductController::createindex');
-$routes->get('/editproduct/(:num)', 'ProductController::editindex');
+$routes->get('/editproduct/(:num)', 'ProductController::editindex/$1');
 $routes->get('/product/delete/(:num)', 'ProductController::delete/$1');
 $routes->post('/product/add', 'ProductController::create');
 $routes->post('/product/edit/(:num)', 'ProductController::edit/$1');

@@ -36,9 +36,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="<?= base_url('services/mobile'); ?>">Product List</a>
-                        <a class="dropdown-item" href="<?= base_url('services/web'); ?>">Add Product</a>
-                        <a class="dropdown-item" href="<?= base_url('services/mobile'); ?>">Edit Product</a>
+                        <a class="dropdown-item" href="<?= base_url('/productsList'); ?>">product List</a>
+                        <a class="dropdown-item" href="<?= base_url('/addproduct'); ?>">Add product</a>
                     </div>
                 </li>
 
@@ -48,9 +47,8 @@
                         Category
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="<?= base_url('services/mobile'); ?>">Category List</a>
-                        <a class="dropdown-item" href="<?= base_url('services/web'); ?>">Add Category</a>
-                        <a class="dropdown-item" href="<?= base_url('services/mobile'); ?>">Edit Category</a>
+                        <a class="dropdown-item" href="<?= base_url('/categoriesList'); ?>">category List</a>
+                        <a class="dropdown-item" href="<?= base_url('/addcategory'); ?>">Add category</a>
                     </div>
                 </li>
 
@@ -70,9 +68,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Order</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="<?= base_url('services/mobile'); ?>">Order List</a>
-                        <a class="dropdown-item" href="<?= base_url('services/web'); ?>">Add Order</a>
-                        <a class="dropdown-item" href="<?= base_url('services/mobile'); ?>">Edit Order</a>
+                        <a class="dropdown-item" href="<?= base_url('/ordersList'); ?>">order List</a>
+                        <a class="dropdown-item" href="<?= base_url('/addorder'); ?>">Add order</a>
                     </div>
                 </li>
 
@@ -81,7 +78,7 @@
     </nav>
 
     <div class="container d-flex flex-column gap-3">
-        <?= $this->renderSection('content') ?>;
+        <?= $this->renderSection('content'); ?>
     </div>
 </body>
 

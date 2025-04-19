@@ -1,7 +1,7 @@
 <?php $this->extend('homepage') ?>
 <?php $this->section('content') ?>
 <h2>Customer List</h2>
-<a class="btn btn-success" role="button" href="/addcustomer">Add New Customer</a>
+<a class="btn btn-success" role="button" href="<?= base_url('/addcustomer') ?>">Add New Customer</a>
 <table class="table" border="1">
     <tr>
         <th>ID</th>

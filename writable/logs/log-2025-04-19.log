@@ -441,3 +441,320 @@ DEBUG - 2025-04-19 04:45:51 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-04-19 04:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-04-19 04:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-04-19 04:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 04:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 04:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 04:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 04:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 04:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 04:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 05:00:52 --> ErrorException: Undefined variable $customers
+[Method: GET, Route: productsList]
+in APPPATH\Views\products\index.php on line 14.
+ 1 APPPATH\Views\products\index.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customers', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\index.php', 14)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('products/index', [], true)
+ 5 APPPATH\Controllers\ProductController.php(15): view('products/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 05:02:22 --> ErrorException: Undefined array key "email"
+[Method: GET, Route: productsList]
+in APPPATH\Views\products\index.php on line 18.
+ 1 APPPATH\Views\products\index.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\index.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('products/index', [], true)
+ 5 APPPATH\Controllers\ProductController.php(15): view('products/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 05:30:20 --> ArgumentCountError: Too few arguments to function App\Controllers\ProductController::editindex(), 0 passed in C:\xampp\htdocs\hung-test\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editproduct/1]
+in APPPATH\Controllers\ProductController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 05:31:22 --> ArgumentCountError: Too few arguments to function App\Controllers\ProductController::editindex(), 0 passed in C:\xampp\htdocs\hung-test\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editproduct/1]
+in APPPATH\Controllers\ProductController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 05:58:54 --> ArgumentCountError: Too few arguments to function App\Controllers\ProductController::editindex(), 0 passed in C:\xampp\htdocs\hung-test\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editproduct/1]
+in APPPATH\Controllers\ProductController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 06:29:55 --> ArgumentCountError: Too few arguments to function App\Controllers\ProductController::editindex(), 0 passed in C:\xampp\htdocs\hung-test\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editproduct/1]
+in APPPATH\Controllers\ProductController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 07:33:09 --> ArgumentCountError: Too few arguments to function App\Controllers\ProductController::editindex(), 0 passed in C:\xampp\htdocs\hung-test\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editproduct/1]
+in APPPATH\Controllers\ProductController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 07:33:35 --> ArgumentCountError: Too few arguments to function App\Controllers\ProductController::editindex(), 0 passed in C:\xampp\htdocs\hung-test\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editproduct/1]
+in APPPATH\Controllers\ProductController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 07:33:55 --> Error: Class "App\Controllers\CategoryModel" not found
+[Method: GET, Route: addproduct]
+in APPPATH\Controllers\ProductController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->createindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 07:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 07:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 07:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 07:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 07:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 07:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 07:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 07:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 07:52:17 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ProductModel"
+[Method: POST, Route: product/add]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ProductModel')
+ 2 SYSTEMPATH\BaseModel.php(820): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\ProductController.php(60): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 07:59:50 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ProductModel"
+[Method: POST, Route: product/add]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ProductModel')
+ 2 SYSTEMPATH\BaseModel.php(820): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\ProductController.php(60): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 07:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 07:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 08:00:15 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ProductModel"
+[Method: POST, Route: product/add]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ProductModel')
+ 2 SYSTEMPATH\BaseModel.php(820): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\ProductController.php(60): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 08:03:04 --> ArgumentCountError: Too few arguments to function App\Controllers\ProductController::editindex(), 0 passed in C:\xampp\htdocs\hung-test\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editproduct/6]
+in APPPATH\Controllers\ProductController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 08:11:31 --> ArgumentCountError: Too few arguments to function App\Controllers\ProductController::editindex(), 0 passed in C:\xampp\htdocs\hung-test\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editproduct/5]
+in APPPATH\Controllers\ProductController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 08:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 08:12:21 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: editproduct/5]
+in APPPATH\Views\products\edit.php on line 21.
+ 1 APPPATH\Views\products\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('products/edit', [], true)
+ 5 APPPATH\Controllers\ProductController.php(28): view('products/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex('5')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 08:14:21 --> ErrorException: Undefined variable $categoryModel
+[Method: GET, Route: editproduct/5]
+in APPPATH\Controllers\ProductController.php on line 28.
+ 1 APPPATH\Controllers\ProductController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryModel', 'C:\\xampp\\htdocs\\hung-test\\app\\Controllers\\ProductController.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex('5')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 08:15:54 --> ErrorException: Undefined variable $categoryModel
+[Method: GET, Route: editproduct/5]
+in APPPATH\Controllers\ProductController.php on line 28.
+ 1 APPPATH\Controllers\ProductController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryModel', 'C:\\xampp\\htdocs\\hung-test\\app\\Controllers\\ProductController.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex('5')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 08:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 08:17:03 --> ErrorException: Undefined variable $cat
+[Method: GET, Route: editproduct/5]
+in APPPATH\Views\products\edit.php on line 19.
+ 1 APPPATH\Views\products\edit.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cat', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\edit.php', 19)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('products/edit', [], true)
+ 5 APPPATH\Controllers\ProductController.php(30): view('products/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex('5')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 08:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 08:17:54 --> ErrorException: Undefined variable $cat
+[Method: GET, Route: editproduct/5]
+in APPPATH\Views\products\edit.php on line 19.
+ 1 APPPATH\Views\products\edit.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cat', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\edit.php', 19)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('products/edit', [], true)
+ 5 APPPATH\Controllers\ProductController.php(30): view('products/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->editindex('5')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 08:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 08:53:32 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: editcategory/1]
+in APPPATH\Views\categories\edit.php on line 11.
+ 1 APPPATH\Views\categories\edit.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\categories\\edit.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\categories\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('categories/edit', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(34): view('categories/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->editindex('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 08:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 08:56:18 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\CategoryModel"
+[Method: POST, Route: category/add]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoryModel')
+ 2 SYSTEMPATH\BaseModel.php(820): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoryController.php(26): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 08:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 08:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 09:08:47 --> ErrorException: Undefined variable $Categories
+[Method: GET, Route: api/categories]
+in APPPATH\Controllers\API\CategoryAPIController.php on line 16.
+ 1 APPPATH\Controllers\API\CategoryAPIController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Categories', 'C:\\xampp\\htdocs\\hung-test\\app\\Controllers\\API\\CategoryAPIController.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\CategoryAPIController->getAllCategories()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CategoryAPIController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 09:09:13 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: api/categories]
+in APPPATH\Controllers\API\CategoryAPIController.php on line 16.
+ 1 APPPATH\Controllers\API\CategoryAPIController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\hung-test\\app\\Controllers\\API\\CategoryAPIController.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\CategoryAPIController->getAllCategories()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CategoryAPIController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 09:09:14 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: api/categories]
+in APPPATH\Controllers\API\CategoryAPIController.php on line 16.
+ 1 APPPATH\Controllers\API\CategoryAPIController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\hung-test\\app\\Controllers\\API\\CategoryAPIController.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\CategoryAPIController->getAllCategories()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CategoryAPIController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 09:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
