@@ -758,3 +758,422 @@ DEBUG - 2025-04-19 09:16:50 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-04-19 09:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-04-19 09:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-04-19 09:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 09:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 12:59:49 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: ordersList]
+in APPPATH\Views\orders\index.php on line 13.
+ 1 APPPATH\Views\orders\index.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\index.php', 13)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/index', [], true)
+ 5 APPPATH\Controllers\OrderController.php(19): view('orders/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 13:03:42 --> ErrorException: Undefined array key "address"
+[Method: GET, Route: ordersList]
+in APPPATH\Views\orders\index.php on line 19.
+ 1 APPPATH\Views\orders\index.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "address"', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\index.php', 19)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/index', [], true)
+ 5 APPPATH\Controllers\OrderController.php(17): view('orders/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 13:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 15:24:53 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\OrderModel"
+[Method: POST, Route: order/add]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\OrderModel')
+ 2 SYSTEMPATH\BaseModel.php(820): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\OrderController.php(52): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\OrderController.php(33): App\Controllers\OrderController->createOrder('5')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-04-19 15:26:31 --> mysqli_sql_exception: Table 'hung-test.orderitems' doesn't exist in C:\xampp\htdocs\hung-test\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hung-test\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\xampp\htdocs\hung-test\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\xampp\htdocs\hung-test\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\xampp\htdocs\hung-test\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\xampp\htdocs\hung-test\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\hung-test\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\hung-test\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\hung-test\app\Controllers\OrderController.php(70): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\hung-test\app\Controllers\OrderController.php(34): App\Controllers\OrderController->createOrderItems(4, Array)
+#9 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(933): App\Controllers\OrderController->create()
+#10 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#11 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\hung-test\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\hung-test\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\hung-test\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-04-19 15:26:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'hung-test.orderitems' doesn't exist
+[Method: POST, Route: order/add]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (:order_id:, :product_id:, :quantity:, :price:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\OrderController.php(70): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\OrderController.php(34): App\Controllers\OrderController->createOrderItems(4, [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:26:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'hung-test.orderitems' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (4, \'2\', 1, 200, \'2025-04-19 15:26:31\', \'2025-04-19 15:26:31\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (4, \'2\', 1, 200, \'2025-04-19 15:26:31\', \'2025-04-19 15:26:31\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (:order_id:, :product_id:, :quantity:, :price:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\OrderController.php(70): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\OrderController.php(34): App\Controllers\OrderController->createOrderItems(4, [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:26:31 --> [Caused by] mysqli_sql_exception: Table 'hung-test.orderitems' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (4, \'2\', 1, 200, \'2025-04-19 15:26:31\', \'2025-04-19 15:26:31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (4, \'2\', 1, 200, \'2025-04-19 15:26:31\', \'2025-04-19 15:26:31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (4, \'2\', 1, 200, \'2025-04-19 15:26:31\', \'2025-04-19 15:26:31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (:order_id:, :product_id:, :quantity:, :price:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\OrderController.php(70): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\OrderController.php(34): App\Controllers\OrderController->createOrderItems(4, [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-04-19 15:28:32 --> mysqli_sql_exception: Table 'hung-test.orderitems' doesn't exist in C:\xampp\htdocs\hung-test\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hung-test\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\xampp\htdocs\hung-test\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\xampp\htdocs\hung-test\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\xampp\htdocs\hung-test\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\xampp\htdocs\hung-test\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\hung-test\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\hung-test\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\hung-test\app\Controllers\OrderController.php(71): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\hung-test\app\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrderItems(5, Array)
+#9 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(933): App\Controllers\OrderController->create()
+#10 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#11 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\hung-test\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\hung-test\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\hung-test\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-04-19 15:28:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'hung-test.orderitems' doesn't exist
+[Method: POST, Route: order/add]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (:order_id:, :product_id:, :quantity:, :price:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\OrderController.php(71): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrderItems(5, [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:28:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'hung-test.orderitems' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (5, \'2\', 1, 200, \'2025-04-19 15:28:32\', \'2025-04-19 15:28:32\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (5, \'2\', 1, 200, \'2025-04-19 15:28:32\', \'2025-04-19 15:28:32\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (:order_id:, :product_id:, :quantity:, :price:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\OrderController.php(71): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrderItems(5, [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:28:32 --> [Caused by] mysqli_sql_exception: Table 'hung-test.orderitems' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (5, \'2\', 1, 200, \'2025-04-19 15:28:32\', \'2025-04-19 15:28:32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (5, \'2\', 1, 200, \'2025-04-19 15:28:32\', \'2025-04-19 15:28:32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (5, \'2\', 1, 200, \'2025-04-19 15:28:32\', \'2025-04-19 15:28:32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orderitems` (`order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES (:order_id:, :product_id:, :quantity:, :price:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\OrderController.php(71): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrderItems(5, [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:30:07 --> ErrorException: Undefined variable $db
+[Method: POST, Route: order/add]
+in APPPATH\Controllers\OrderController.php on line 38.
+ 1 APPPATH\Controllers\OrderController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\hung-test\\app\\Controllers\\OrderController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 15:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 15:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 15:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 15:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 15:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-19 15:45:23 --> mysqli_sql_exception: Column 'total_amount' cannot be null in C:\xampp\htdocs\hung-test\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hung-test\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\xampp\htdocs\hung-test\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\xampp\htdocs\hung-test\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\xampp\htdocs\hung-test\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\xampp\htdocs\hung-test\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\hung-test\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\hung-test\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\hung-test\app\Controllers\OrderController.php(49): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\hung-test\app\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrder('5', NULL)
+#9 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(933): App\Controllers\OrderController->create()
+#10 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#11 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\hung-test\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\hung-test\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\hung-test\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-04-19 15:45:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'total_amount' cannot be null
+[Method: POST, Route: order/add]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (:customer_id:, :total_amount:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\OrderController.php(49): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrder('5', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:45:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'total_amount' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:45:23\', \'2025-04-19 15:45:23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:45:23\', \'2025-04-19 15:45:23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (:customer_id:, :total_amount:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\OrderController.php(49): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrder('5', null)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:45:23 --> [Caused by] mysqli_sql_exception: Column 'total_amount' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:45:23\', \'2025-04-19 15:45:23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:45:23\', \'2025-04-19 15:45:23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:45:23\', \'2025-04-19 15:45:23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (:customer_id:, :total_amount:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\OrderController.php(49): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrder('5', null)
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-04-19 15:47:58 --> mysqli_sql_exception: Column 'total_amount' cannot be null in C:\xampp\htdocs\hung-test\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hung-test\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\xampp\htdocs\hung-test\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\xampp\htdocs\hung-test\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\xampp\htdocs\hung-test\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\xampp\htdocs\hung-test\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\hung-test\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\hung-test\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\hung-test\app\Controllers\OrderController.php(49): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\hung-test\app\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrder('5', NULL)
+#9 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(933): App\Controllers\OrderController->create()
+#10 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#11 C:\xampp\htdocs\hung-test\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\hung-test\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\hung-test\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\hung-test\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-04-19 15:47:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'total_amount' cannot be null
+[Method: POST, Route: order/add]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (:customer_id:, :total_amount:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\OrderController.php(49): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrder('5', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:47:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'total_amount' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:47:58\', \'2025-04-19 15:47:58\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:47:58\', \'2025-04-19 15:47:58\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (:customer_id:, :total_amount:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\OrderController.php(49): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrder('5', null)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 15:47:58 --> [Caused by] mysqli_sql_exception: Column 'total_amount' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:47:58\', \'2025-04-19 15:47:58\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:47:58\', \'2025-04-19 15:47:58\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (\'5\', NULL, \'pending\', \'2025-04-19 15:47:58\', \'2025-04-19 15:47:58\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`customer_id`, `total_amount`, `status`, `created_at`, `updated_at`) VALUES (:customer_id:, :total_amount:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\OrderController.php(49): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\OrderController.php(35): App\Controllers\OrderController->createOrder('5', null)
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 15:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 15:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 15:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 16:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 16:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 16:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-19 16:22:21 --> ErrorException: Undefined variable $order
+[Method: GET, Route: editorder/2]
+in APPPATH\Views\orders\edit.php on line 1.
+ 1 APPPATH\Views\orders\edit.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(34): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 16:23:15 --> ErrorException: Undefined variable $order
+[Method: GET, Route: editorder/2]
+in APPPATH\Views\orders\edit.php on line 1.
+ 1 APPPATH\Views\orders\edit.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 16:23:24 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: editorder/2]
+in APPPATH\Views\orders\edit.php on line 1.
+ 1 APPPATH\Views\orders\edit.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 16:24:12 --> ErrorException: Undefined variable $order
+[Method: GET, Route: editorder/2]
+in APPPATH\Views\orders\edit.php on line 1.
+ 1 APPPATH\Views\orders\edit.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $order', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 16:25:30 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: editorder/2]
+in APPPATH\Views\orders\edit.php on line 1.
+ 1 APPPATH\Views\orders\edit.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-19 16:27:50 --> ErrorException: Undefined variable $items
+[Method: GET, Route: editorder/2]
+in APPPATH\Views\orders\edit.php on line 31.
+ 1 APPPATH\Views\orders\edit.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $items', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 31)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-19 16:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 16:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 16:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 16:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 16:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-19 16:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
