@@ -1,0 +1,249 @@
+DEBUG - 2025-04-20 02:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 02:16:16 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: order/add]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('order/add', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-20 02:18:46 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: order/add]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('order/add', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 02:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:19:01 --> CSRF token verified.
+DEBUG - 2025-04-20 02:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 02:29:23 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: order/edit/11]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('order/edit/11', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 02:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 02:35:42 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: editorder/2]
+in APPPATH\Views\orders\edit.php on line 45.
+ 1 APPPATH\Views\orders\edit.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 02:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 02:37:16 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: editorder/11]
+in APPPATH\Views\orders\edit.php on line 45.
+ 1 APPPATH\Views\orders\edit.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 02:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 02:41:55 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: editorder/11]
+in APPPATH\Views\orders\edit.php on line 44.
+ 1 APPPATH\Views\orders\edit.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 02:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 02:42:24 --> ErrorException: Undefined array key "subtotal"
+[Method: GET, Route: editorder/11]
+in APPPATH\Views\orders\edit.php on line 52.
+ 1 APPPATH\Views\orders\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subtotal"', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 02:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 02:43:50 --> ErrorException: Undefined variable $totalAmount
+[Method: GET, Route: editorder/11]
+in APPPATH\Views\orders\edit.php on line 62.
+ 1 APPPATH\Views\orders\edit.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalAmount', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php', 62)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\orders\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('orders/edit', [], true)
+ 5 APPPATH\Controllers\OrderController.php(38): view('orders/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->editindex('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 02:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 02:57:06 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: order/edit/11]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('order/edit/11', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-20 02:57:18 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: order/edit/11]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('order/edit/11', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 02:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:57:23 --> CSRF token verified.
+DEBUG - 2025-04-20 02:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:57:32 --> CSRF token verified.
+DEBUG - 2025-04-20 02:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:58:07 --> CSRF token verified.
+DEBUG - 2025-04-20 02:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:58:22 --> CSRF token verified.
+DEBUG - 2025-04-20 02:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:58:32 --> CSRF token verified.
+DEBUG - 2025-04-20 02:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:59:38 --> CSRF token verified.
+DEBUG - 2025-04-20 02:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 02:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:59:59 --> CSRF token verified.
+DEBUG - 2025-04-20 02:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 03:08:19 --> ErrorException: Undefined variable $product
+[Method: GET, Route: addproduct]
+in APPPATH\Views\products\create.php on line 40.
+ 1 APPPATH\Views\products\create.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\create.php', 40)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('products/create', [], true)
+ 5 APPPATH\Controllers\ProductController.php(22): view('products/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->createindex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 03:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:10:55 --> CSRF token verified.
+DEBUG - 2025-04-20 03:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:13:02 --> CSRF token verified.
+DEBUG - 2025-04-20 03:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:15:44 --> CSRF token verified.
+DEBUG - 2025-04-20 03:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 03:26:58 --> ErrorException: Undefined variable $product
+[Method: GET, Route: addproduct]
+in APPPATH\Views\products\create.php on line 45.
+ 1 APPPATH\Views\products\create.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\create.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\hung-test\\app\\Views\\products\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('products/create', [], true)
+ 5 APPPATH\Controllers\ProductController.php(22): view('products/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->createindex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-20 03:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-20 03:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

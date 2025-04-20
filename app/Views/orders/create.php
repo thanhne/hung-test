@@ -1,51 +1,70 @@
+<?php $this->extend('homepage') ?>
+<?php $this->section('content') ?>
+<h2>Add Order</h2>
+<?php if (session()->has('errors')): ?>
+    <ul style="color: red;">
+        <?php foreach (session('errors') as $error): ?>
+            <li><?= esc($error) ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
 <form method="POST" action="<?= base_url('order/add') ?>">
+    <?= csrf_field() ?>
     <!-- Select customer -->
-    <label>Chọn khách hàng:</label>
-    <select name="customer_id" required>
-        <option value="">-- Chọn khách hàng --</option>
-        <?php foreach ($customers as $customer): ?>
-            <option value="<?= $customer['id'] ?>">
-                <?= esc($customer['name']) ?>
-            </option>
-        <?php endforeach ?>
-    </select>
-
-    <hr>
-    <button type="button" onclick="addProduct()">+ Thêm sản phẩm</button>
-
-    <!-- Chọn sản phẩm -->
-    <div id="product-list">
-        <div class="product-item">
-            <label>Mã hàng:</label>
-            <select name="products[0][product_id]" onchange="onProductChange(this)" required>
-                <option value="">-- Chọn mã hàng --</option>
-                <?php foreach ($products as $product): ?>
-                    <option value="<?= $product['id'] ?>" data-name="<?= $product['name'] ?>" data-price="<?= $product['price'] ?>">
-                        <?= $product['id'] ?>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Chọn khách hàng:</label>
+            <select name="customer_id" required>
+                <option value="">-- Chọn khách hàng --</option>
+                <?php foreach ($customers as $customer): ?>
+                    <option value="<?= $customer['id'] ?>">
+                        <?= esc($customer['name']) ?>
                     </option>
                 <?php endforeach ?>
             </select>
-
-            <label>Tên hàng:</label>
-            <input type="text" name="products[0][name]" readonly>
-
-            <label>Số lượng:</label>
-            <input type="number" name="products[0][qty]" value="1" min="1" oninput="recalculateRow(this)">
-
-            <label>Đơn giá:</label>
-            <input type="number" name="products[0][price]" oninput="recalculateRow(this)">
-
-            <label>Thành tiền:</label>
-            <input type="number" name="products[0][subtotal]" oninput="reverseCalculate(this)">
+        </div>
+        <div class="col">
+            <button class="btn btn-success" type="button" onclick="addProduct()">+ Thêm sản phẩm</button>
+        </div>
 
 
-            <button type="button" onclick="removeProduct(this)">❌</button>
+        <!-- Chọn sản phẩm -->
+        <div class="form-row" id="product-list">
+            <div class="product-item">
+
+                <select name="products[0][product_id]" onchange="onProductChange(this)" required>
+                    <option value="">-- Chọn mã hàng --</option>
+                    <?php foreach ($products as $product): ?>
+                        <option value="<?= $product['id'] ?>" data-name="<?= $product['name'] ?>" data-price="<?= $product['price'] ?>">
+                            <?= $product['id'] ?>
+                        </option>
+                    <?php endforeach ?>
+                </select>
+
+
+                <input type="text" placeholder="name" name="products[0][name]" readonly>
+
+                <input type="number" placeholder="quantity" name="products[0][qty]" value="1" min="1" oninput="recalculateRow(this)">
+
+                <input type="number" step="0.01" placeholder="price" name="products[0][price]" oninput="recalculateRow(this)">
+
+                <input type="number" placeholder="Amount" name="products[0][subtotal]" oninput="reverseCalculate(this)">
+
+                <button type="button" class="btn btn-danger" onclick="removeProduct(this)">❌</button>
+
+            </div>
 
         </div>
+
+        <input type="hidden" name="total_amount" id="totalAmountField">
+
+
     </div>
-    <p><strong>Tổng cộng:</strong> <span id="totalAmount">0</span> đ</p>
-    <input type="hidden" name="total_amount" id="totalAmountField">
-    <button type="submit">Đặt hàng</button>
+    <div class="col">
+        <p><strong>Tổng cộng:</strong> <span id="totalAmount">0</span> đ</p>
+    </div>
+    <button type="submit" class="btn btn-success">Đặt hàng</button>
 </form>
 
 <script>
@@ -58,7 +77,6 @@
         row.classList.add('product-item');
         row.innerHTML = `
         <hr>
-        <label>Mã hàng:</label>
         <select name="products[${productIndex}][product_id]" onchange="onProductChange(this)" required>
             <option value="">-- Chọn mã --</option>
             ${products.map(p =>
@@ -66,17 +84,16 @@
             ).join('')}
         </select>
 
-        <label>Tên hàng:</label>
-        <input type="text" name="products[${productIndex}][name]" readonly>
+  
+        <input type="text" placeholder="name" name="products[${productIndex}][name]" readonly>
 
-        <label>Số lượng:</label>
-        <input type="number" name="products[${productIndex}][qty]" min="1" value="1" oninput="recalculateRow(this)">
+     
+        <input type="number" placeholder="quantity" name="products[${productIndex}][qty]" min="1" value="1" oninput="recalculateRow(this)">
 
-        <label>Đơn giá:</label>
-        <input type="number" name="products[${productIndex}][price]" oninput="recalculateRow(this)">
+  
+        <input type="number" placeholder="price" name="products[${productIndex}][price]" oninput="recalculateRow(this)">
 
-        <label>Thành tiền:</label>
-        <input type="number" name="products[${productIndex}][subtotal]" oninput="reverseCalculate(this)">
+        <input type="number" placeholder="amount" name="products[${productIndex}][subtotal]" oninput="reverseCalculate(this)">
 
         <button type="button" onclick="removeProduct(this)">❌ Xóa</button>
     `;
@@ -99,7 +116,12 @@
         const qty = parseFloat(row.querySelector('input[name*="[qty]"]').value) || 0;
         const price = parseFloat(row.querySelector('input[name*="[price]"]').value) || 0;
         const subtotal = row.querySelector('input[name*="[subtotal]"]');
-        subtotal.value = (qty * price).toFixed(0);
+        subtotal.value = Math.round(qty * price);
+        console.log("Qty:", qty);
+        console.log("Price:", price);
+        console.log("Total (raw):", qty * price);
+        console.log("Total (rounded):", Math.round(qty * price));
+
         updateTotal();
     }
 
@@ -108,7 +130,7 @@
         const qty = parseFloat(row.querySelector('input[name*="[qty]"]').value) || 0;
         const subtotal = parseFloat(inputEl.value) || 0;
         const priceInput = row.querySelector('input[name*="[price]"]');
-        if (qty > 0) priceInput.value = (subtotal / qty).toFixed(0);
+        if (qty > 0) priceInput.value = Math.round(subtotal / qty);
         updateTotal();
     }
 
@@ -128,3 +150,4 @@
         document.querySelector('input[name="total_amount"]').value = total;
     }
 </script>
+<?php $this->endSection() ?>

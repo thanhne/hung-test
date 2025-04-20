@@ -37,7 +37,7 @@ class ProductController extends BaseController
 
         if ($image && $image->isValid() && !$image->hasMoved()) {
             $newName = $image->getRandomName();
-            $image->move(ROOTPATH . 'public/uploads', $newName);
+            $image->move(ROOTPATH . 'public/Assets', $newName);
             return $newName;
         }
 
@@ -46,7 +46,6 @@ class ProductController extends BaseController
     public function create()
     {
         $model = new ProductModel();
-        $imageName = $this->handleImageUpload();
         $data = [
             'name' => $this->request->getPost('name'),
             'category_id' => $this->request->getPost('category_id'),
@@ -54,6 +53,8 @@ class ProductController extends BaseController
             'price' => $this->request->getPost('price'),
             'stock' => $this->request->getPost('stock'),
         ];
+        $imageName = $this->handleImageUpload();
+
         if ($imageName) {
             $data['image'] = $imageName;
         }
@@ -73,6 +74,13 @@ class ProductController extends BaseController
             'price' => $this->request->getPost('price'),
             'stock' => $this->request->getPost('stock'),
         ];
+        if ($imageName) {
+            if (!empty($product['image']) && file_exists(ROOTPATH . 'public/Assets/' . $product['image'])) {
+                unlink(ROOTPATH . 'public/Assets/' . $product['image']);
+            }
+
+            $data['image'] = $imageName;
+        }
         if ($imageName) {
             $data['image'] = $imageName;
         }

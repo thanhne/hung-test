@@ -1,6 +1,6 @@
 <?php $this->extend('homepage') ?>
 <?php $this->section('content') ?>
-<h2>Add Product</h2>
+<h2>Edit Product</h2>
 
 <?php if (session()->has('errors')): ?>
     <ul style="color: red;">
@@ -10,7 +10,8 @@
     </ul>
 <?php endif; ?>
 
-<form method="post" action="<?= base_url('product/edit/' . $product['id']) ?>">
+<form method="post" action="<?= base_url('product/edit/' . $product['id']) ?>" enctype="multipart/form-data">
+    <?= csrf_field() ?>
     <div class="form-group">
         <input class="form-control" type="text" name="name" placeholder="name" value="<?= esc($product['name']) ?>" required></p>
     </div>
@@ -26,7 +27,7 @@
         </select>
     </div>
     <div class="form-group">
-        <input class="form-control" type="number" step="0.01" name="price" placeholder="price" value="<?= esc($product['price']) ?>"><br>
+        <input class="form-control" type="number" step="0.01" name="price" placeholder="price" value="<?= esc($product['price']) ?>" required><br>
     </div>
     <div class="form-group">
         <input class="form-control" type="number" name="stock" placeholder="stock" value="<?= esc($product['stock']) ?>" required><br>
@@ -34,12 +35,18 @@
     <div class="form-group">
         <input class="form-control" type="arena" name="description" placeholder="description" value="<?= esc($product['description']) ?>" required><br>
     </div>
+
     <div class="form-group">
-        <input class="form-control" type="file" name="image" id="imageInput" value="<?= esc($product['image']) ?>"><br>
+        <label for="image">Choose</label>
+        <input type="file" name="image" class="form-control">
     </div>
-    <div class="mb-3">
-        <img id="preview" class="img-fluid rounded border d-none" alt="Ảnh xem trước">
-    </div>
+
+    <?php if (!empty($product['image'])): ?>
+        <div class="form-group">
+            <label>Hình hiện tại:</label><br>
+            <img id="preview" src="<?= base_url('public/Assets/' . $product['image']) ?>" alt="Ảnh" width="100">
+        </div>
+    <?php endif; ?>
     <button type="submit" class="btn btn-success">Save</button>
 </form>
 

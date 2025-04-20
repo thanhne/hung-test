@@ -1,6 +1,17 @@
+<?php $this->extend('homepage') ?>
+<?php $this->section('content') ?>
+<h2>Edit Order</h2>
+<?php if (session()->has('errors')): ?>
+    <ul style="color: red;">
+        <?php foreach (session('errors') as $error): ?>
+            <li><?= esc($error) ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 <form method="post" action="<?= base_url('order/edit/' . $order['id']) ?>">
-    <label>Khách hàng:</label>
-    <select name="customer_id">
+    <?= csrf_field() ?>
+    <label>Customer</label>
+    <select class="form-control" name="customer_id">
         <?php foreach ($customers as $c): ?>
             <option value="<?= $c['id'] ?>" <?= $c['id'] == $order['customer_id'] ? 'selected' : '' ?>>
                 <?= $c['name'] ?>
@@ -8,8 +19,8 @@
         <?php endforeach ?>
     </select>
 
-    <label>Trạng thái:</label>
-    <select name="status">
+    <label>Status:</label>
+    <select name="status" class="form-control">
         <option value="pending" <?= $order['status'] == 'pending' ? 'selected' : '' ?>>Pending</option>
         <option value="completed" <?= $order['status'] == 'completed' ? 'selected' : '' ?>>Compelte</option>
         <option value="canceled" <?= $order['status'] == 'canceled' ? 'selected' : '' ?>>Cancel</option>
@@ -17,13 +28,14 @@
 
     <hr>
 
-    <table id="order-items">
+
+    <table id="order-items" class="table">
         <thead>
             <tr>
-                <th>Sản phẩm</th>
-                <th>Số lượng</th>
-                <th>Đơn giá</th>
-                <th>Thành tiền</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Amount</th>
                 <th></th>
             </tr>
         </thead>
@@ -31,7 +43,7 @@
             <?php foreach ($order_items as $index => $item): ?>
                 <tr>
                     <td>
-                        <select name="products[<?= $index ?>][product_id]" class="product-select">
+                        <select name="products[<?= $index ?>][product_id]" class="form-control product-select">
                             <?php foreach ($products as $p): ?>
                                 <option value="<?= $p['id'] ?>" <?= $p['id'] == $item['product_id'] ? 'selected' : '' ?>>
                                     <?= $p['name'] ?>
@@ -40,21 +52,20 @@
                         </select>
                     </td>
                     <td><input type="number" name="products[<?= $index ?>][qty]" value="<?= $item['quantity'] ?>" class="qty-input" /></td>
-                    <td><input type="number" name="products[<?= $index ?>][price]" value="<?= $item['price'] ?>" class="price-input" /></td>
+                    <td><input type="number" step="0.01" name="products[<?= $index ?>][price]" value="<?= $item['price'] ?>" class="price-input" /></td>
                     <td><input type="number" class="subtotal" readonly /></td>
-                    <td><button type="button" class="remove-row">X</button></td>
+                    <td><button type="button" class="remove-row btn btn-danger">X</button></td>
                 </tr>
             <?php endforeach ?>
         </tbody>
     </table>
 
-    <button type="button" id="add-row">+ Thêm dòng</button>
 
     <hr>
-    <strong>Tổng cộng: </strong><span id="total-amount">0</span> đ
+    <strong>Total: </strong><span id="total-amount">0</span> đ
 
     <br><br>
-    <button type="submit">Cập nhật đơn hàng</button>
+    <button class="btn btn-success" type="submit">Save</button>
 </form>
 
 <script>
@@ -105,9 +116,9 @@
                 </select>
             </td>
             <td><input type="number" name="products[${index}][qty]" value="1" class="qty-input" /></td>
-            <td><input type="number" name="products[${index}][price]" value="0" class="price-input" /></td>
+            <td><input type="number" step="0.01" name="products[${index}][price]" value="0" class="price-input" /></td>
             <td><input type="number" class="subtotal" readonly /></td>
-            <td><button type="button" class="remove-row">X</button></td>
+            <td><button type="button" class="remove-row" btn btn-danger>X</button></td>
         `;
             document.querySelector('#order-items tbody').appendChild(row);
 
@@ -124,3 +135,4 @@
         });
     });
 </script>
+<?php $this->endSection() ?>

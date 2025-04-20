@@ -11,14 +11,15 @@
 <?php endif; ?>
 
 <form method="post" action="<?= base_url('customer/edit/' . $customer['id']) ?>">
+    <?= csrf_field() ?>
     <div class="form-group">
-        <input class="form-control" type="text" name="name" placeholder="Name" value="<?= esc($customer['name']) ?>"><br>
+        <input class="form-control" type="text" name="name" placeholder="Name" value="<?= esc($customer['name']) ?>" required><br>
     </div>
     <div class="form-group">
-        <input class="form-control" type="email" name="email" placeholder="Email" value="<?= esc($customer['email']) ?>"><br>
+        <input class="form-control" type="email" name="email" placeholder="Email" value="<?= esc($customer['email']) ?>" required><br>
     </div>
     <div class="form-group">
-        <input class="form-control" type="text" name="phone" placeholder="Phone" value="<?= esc($customer['phone']) ?>"><br>
+        <input class="form-control" type="text" name="phone" placeholder="Phone" value="<?= esc($customer['phone']) ?>" required><br>
     </div>
     <div class="form-group">
         <input class="form-control" type="text" name="address" placeholder="Address" value="<?= esc($customer['address']) ?>"><br>

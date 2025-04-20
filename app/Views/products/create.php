@@ -10,7 +10,8 @@
     </ul>
 <?php endif; ?>
 
-<form method="post" action="<?= base_url('product/add') ?>">
+<form method="post" action="<?= base_url('product/add') ?> " enctype="multipart/form-data">
+    <?= csrf_field() ?>
     <div class="form-group">
         <input class="form-control" type="text" name="name" placeholder="name" value="<?= old('name') ?>" required></p>
     </div>
@@ -24,20 +25,29 @@
         </select>
     </div>
     <div class="form-group">
-        <input class="form-control" type="number" step="0.01" name="price" placeholder="price" value="<?= old('price') ?>"><br>
+        <input class="form-control" type="number" step="0.01" name="price" placeholder="price" value="<?= old('price') ?>" required><br>
     </div>
     <div class="form-group">
         <input class="form-control" type="number" name="stock" placeholder="stock" value="<?= old('stock') ?>" required><br>
     </div>
     <div class="form-group">
-        <input class="form-control" type="arena" name="description" placeholder="description" value="<?= old('description') ?>" required><br>
+        <input class="form-control" type="arena" name="description" placeholder="description" value="<?= old('description') ?>"><br>
     </div>
+
     <div class="form-group">
-        <input class="form-control" type="file" name="image" id="imageInput" value="<?= old('image') ?>"><br>
+        <label for="image">Hình ảnh sản phẩm</label>
+        <input type="file" name="image" class="form-control" <?= isset($product) ? '' : 'required' ?>>
     </div>
-    <div class="mb-3">
-        <img id="preview" class="img-fluid rounded border d-none" alt="Ảnh xem trước">
-    </div>
+
+    <?php if (!empty($product['image'])): ?>
+        <div class="form-group mb-3">
+            <label>Choose:</label><br>
+            <img id="preview" src="<?= base_url('public/Assets/' . $product['image']) ?>" alt="Image" width="100">
+        </div>
+    <?php endif; ?>
+
+
+
     <button type="submit" class="btn btn-success">Save</button>
 </form>
 

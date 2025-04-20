@@ -15,7 +15,13 @@
     <?php foreach ($products as $product): ?>
         <tr>
             <td><?= $product['id'] ?></td>
-            <td><?= $product['image'] ?></td>
+            <td>
+                <?php if (!empty($product['image'])): ?>
+                    <img src="<?= base_url('public/Assets/' . $product['image']) ?>" alt="Ảnh" width="80">
+                <?php else: ?>
+                    <span>Không có ảnh</span>
+                <?php endif; ?>
+            </td>
             <td><?= $product['name'] ?></td>
             <td><?= $product['description'] ?></td>
             <td><?= $product['price'] ?></td>

@@ -11,14 +11,15 @@
 <?php endif; ?>
 
 <form method="post" action="<?= base_url('customer/add') ?>">
+    <?= csrf_field() ?>
     <div class="form-group">
-        <input class="form-control" type="text" name="name" placeholder="Name" value="<?= old('name') ?>"><br>
+        <input class="form-control" type="text" name="name" placeholder="Name" value="<?= old('name') ?>" required><br>
     </div>
     <div class="form-group">
-        <input class="form-control" type="email" name="email" placeholder="Email" value="<?= old('email') ?>"><br>
+        <input class="form-control" type="email" name="email" placeholder="Email" value="<?= old('email') ?>" required><br>
     </div>
     <div class="form-group">
-        <input class="form-control" type="text" name="phone" placeholder="Phone" value="<?= old('phone') ?>"><br>
+        <input class="form-control" type="text" name="phone" placeholder="Phone" value="<?= old('phone') ?>" required><br>
     </div>
     <div class="form-group">
         <input class="form-control" type="text" name="address" placeholder="Address" value="<?= old('address') ?>"><br>
